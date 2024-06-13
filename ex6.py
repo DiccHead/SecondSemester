@@ -4,8 +4,8 @@ class number_operations:
     def __init__(self):
         print("При указани чисел в какой либо системе счисления, указывайте их в формате 'nba'. Где n - это номер системы счисления, b - это служебный символ, указывающий на разделение, а а - это число в этой системе счисления.")
 
-
-    def convert_to_n(self, a: int, n: int):
+    @classmethod
+    def convert_to_n(cls, a: int, n: int):
         s = ''
         while a > 0:
             c = a % n
@@ -19,8 +19,8 @@ class number_operations:
         
         return s
 
-
-    def convert_from_n(self, a: str, n: int):
+    @classmethod
+    def convert_from_n(cls, a: str, n: int):
         power = 0
         s = 0
         for i in a[::-1]:
@@ -34,8 +34,8 @@ class number_operations:
         
         return s
     
-
-    def convert_to_n_float(self, a: float, n: int):
+    @classmethod
+    def convert_to_n_float(cls, a: float, n: int):
         s = ''
         sf = ''
         sd = ''
@@ -69,18 +69,18 @@ class number_operations:
         s = sf + "." + sd
         return s
     
-
-    def get_slices(self, i: str):
+    @classmethod
+    def get_slices(cls, i: str):
         n = int(i[:i.index('b')])
         a = i[i.index('b')+1:]
         return n, a
 
-
-    def find_equals(self, sp: list):
+    @classmethod
+    def find_equals(cls, sp: list):
         converted_list = []
         for i in sp:
-            n, a = self.get_slices(i)
-            converted_list.append(self.convert_from_n(a, n))
+            n, a = cls.get_slices(i)
+            converted_list.append(cls.convert_from_n(a, n))
 
         new_list = converted_list
         for j in converted_list:
@@ -94,39 +94,38 @@ class number_operations:
 
                 print(equals)
         
-
-    def find_sum_in_n(self, sp: list, n1: int):
+    @classmethod
+    def find_sum_in_n(cls, sp: list, n1: int):
         converted_list = []
         for i in sp:
-            n, a = self.get_slices(i)
-            converted_list.append(self.convert_from_n(a, n))
+            n, a = cls.get_slices(i)
+            converted_list.append(cls.convert_from_n(a, n))
         answer = sum(converted_list)
-        answer = self.convert_to_n(answer, n1)
+        answer = cls.convert_to_n(answer, n1)
         print(answer)
         
 
 
 
-ins = number_operations()
 
 print("Задание 1:")
-ins.find_equals(['16b11', '8b6', '4b013', '2b111'])
+number_operations.find_equals(['16b11', '8b6', '4b013', '2b111'])
 print('')
 
 print("Задание 2:")
-ins.find_sum_in_n(['16b11', '8b6', '4b013', '2b111'], 16)
+number_operations.find_sum_in_n(['16b11', '8b6', '4b013', '2b111'], 16)
 print('')
 
 print("Задание 3:")
-print(ins.convert_to_n(150, 2))
-print(ins.convert_to_n(150, 16))
-print(ins.convert_to_n(150, 8))
+print(number_operations.convert_to_n(150, 2))
+print(number_operations.convert_to_n(150, 16))
+print(number_operations.convert_to_n(150, 8))
 print('')
 
 print("Задание 4:")
-print("1011 в десятичной системе счисления:", ins.convert_from_n("1011", 2))
-print("10 в десятичной системе счисления:", ins.convert_from_n("10", 2))
-print("1101 в десятичной системе счисления:", ins.convert_from_n("1101", 2))
+print("1011 в десятичной системе счисления:", number_operations.convert_from_n("1011", 2))
+print("10 в десятичной системе счисления:", number_operations.convert_from_n("10", 2))
+print("1101 в десятичной системе счисления:", number_operations.convert_from_n("1101", 2))
 print("Следовательно, знак между ними: +")
 print('')
 
@@ -134,7 +133,7 @@ print("Задание 5:")
 a = 5/3
 b = 2/9
 c = a + b
-c = ins.convert_to_n_float(c, 3)
+c = number_operations.convert_to_n_float(c, 3)
 print(c[:c.index(".")]+c[c.index("."):c.index(".")+4])
 
 print("Работу выполнил студент 2023-ФГиИБ-ИСиТ-2б Утягулов Артем.")
