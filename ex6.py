@@ -137,6 +137,7 @@ c = a + b
 c = ins.convert_to_n_float(c, 3)
 print(c[:c.index(".")]+c[c.index("."):c.index(".")+4])
 
+print("Работу выполнил студент 2023-ФГиИБ-ИСиТ-2б Утягулов Артем.")
 
 #print(ins.convert_from_n("11", 16), ins.convert_from_n("6", 8), ins.convert_from_n("013", 4), ins.convert_from_n("111", 2))
 

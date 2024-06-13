@@ -24,3 +24,5 @@ for x in range(-40, 41):
 
 for i in range(len(all_x)):
     print(f"x = {all_x[i]}, y = {all_y[i]}")
+
+print("Работу выполнил студент 2023-ФГиИБ-ИСиТ-2б Утягулов Артем.")

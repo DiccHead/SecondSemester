@@ -14,3 +14,5 @@ SB = (S1 - S2) / cos(radians(a))
 SB = abs(SB)
 
 print("{x:.2f}".format(x = V), "{x:.2f}".format(x = SB))
+
+print("Работу выполнил студент 2023-ФГиИБ-ИСиТ-2б Утягулов Артем.")

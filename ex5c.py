@@ -44,3 +44,4 @@ ekz = FifthC(x0, xn, deltaX)
 ekz.program()
 ekz.print_all()
 
+print("Работу выполнил студент 2023-ФГиИБ-ИСиТ-2б Утягулов Артем.")
