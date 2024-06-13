@@ -39,7 +39,7 @@ class MyWin(QtWidgets.QMainWindow):
         full_sum = 0
         for i in range(a*multiplicator+int(deltaX*multiplicator), b*multiplicator+1, int(deltaX*multiplicator)):
             i = i / multiplicator
-            s = self.f(i)*deltaX
+            s = self.f(i-deltaX/2)*deltaX
             full_sum += s
         
         return full_sum

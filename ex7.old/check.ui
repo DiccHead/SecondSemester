@@ -219,7 +219,7 @@ p, li { white-space: pre-wrap; }
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../ex7/Graphics/graphic_resized.png</pixmap>
+     <pixmap>Graphics/graphic_resized.png</pixmap>
     </property>
    </widget>
    <widget class="QLabel" name="label_7">
@@ -239,7 +239,7 @@ p, li { white-space: pre-wrap; }
      </font>
     </property>
     <property name="text">
-     <string>Вычисление интегралов методом правых прямоугольников</string>
+     <string>Вычисление интегралов методом левых прямоугольников</string>
     </property>
    </widget>
   </widget>

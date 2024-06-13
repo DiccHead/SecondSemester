@@ -174,8 +174,8 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>530</y>
-      <width>241</width>
+      <y>380</y>
+      <width>631</width>
       <height>31</height>
      </rect>
     </property>
@@ -185,15 +185,15 @@ p, li { white-space: pre-wrap; }
      </font>
     </property>
     <property name="text">
-     <string>Определенный интеграл равен:</string>
+     <string>Определенный интеграл по методу правых треугольников равен:</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>530</y>
-      <width>461</width>
+      <x>520</x>
+      <y>380</y>
+      <width>181</width>
       <height>31</height>
      </rect>
     </property>
@@ -212,7 +212,7 @@ p, li { white-space: pre-wrap; }
       <x>440</x>
       <y>60</y>
       <width>561</width>
-      <height>411</height>
+      <height>281</height>
      </rect>
     </property>
     <property name="text">
@@ -225,9 +225,9 @@ p, li { white-space: pre-wrap; }
    <widget class="QLabel" name="label_7">
     <property name="geometry">
      <rect>
-      <x>110</x>
+      <x>140</x>
       <y>10</y>
-      <width>621</width>
+      <width>531</width>
       <height>31</height>
      </rect>
     </property>
@@ -239,7 +239,79 @@ p, li { white-space: pre-wrap; }
      </font>
     </property>
     <property name="text">
-     <string>Вычисление интегралов методом левых прямоугольников</string>
+     <string>Вычисление интегралов методами прямоугольников</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>420</y>
+      <width>631</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Определенный интеграл по методу средних треугольников равен:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>420</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>460</y>
+      <width>631</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Определенный интеграл по методу левых треугольников равен:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>460</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>
@@ -358,6 +430,38 @@ p, li { white-space: pre-wrap; }
     <hint type="destinationlabel">
      <x>480</x>
      <y>526</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>label_9</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>260</x>
+     <y>331</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>610</x>
+     <y>456</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>label_11</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>260</x>
+     <y>331</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>610</x>
+     <y>496</y>
     </hint>
    </hints>
   </connection>
